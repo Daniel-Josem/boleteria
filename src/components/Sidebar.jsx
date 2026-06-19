@@ -28,16 +28,10 @@ export default function Sidebar() {
   return (
     <aside className={styles.sidebar}>
       <div className={styles.logo}>
-        <div className={styles.logoIcon}>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-            <rect x="2" y="7" width="20" height="14" rx="2"/>
-            <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/>
-            <line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/>
-          </svg>
-        </div>
+        <img src="/eventu-icono.png" alt="Eventu" className={styles.logoImg} />
         <div>
-          <div className={styles.logoTitle}>Boletería</div>
-          <div className={styles.logoSub}>Admin Panel</div>
+          <div className={styles.logoTitle}>Eventu</div>
+          <div className={styles.logoSub}>Control de Boletería</div>
         </div>
       </div>
       <nav className={styles.nav}>
