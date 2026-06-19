@@ -1,0 +1,75 @@
+.page { padding: 32px; max-width: 1200px; }
+.header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 24px; gap: 16px; flex-wrap: wrap; }
+.title { font-size: 26px; font-weight: 800; color: var(--text); margin-bottom: 4px; }
+.subtitle { font-size: 14px; color: var(--text-muted); }
+
+.addBtn {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: var(--primary); color: white; font-size: 14px; font-weight: 600;
+  padding: 10px 18px; border-radius: 8px; transition: background 0.15s; white-space: nowrap;
+}
+.addBtn:hover { background: var(--primary-dark); }
+
+.resumen {
+  background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 20px 28px; display: flex; align-items: center; gap: 0;
+  margin-bottom: 20px; flex-wrap: wrap;
+}
+.resumenItem { flex: 1; text-align: center; padding: 8px 16px; min-width: 100px; }
+.resumenVal { display: block; font-size: 28px; font-weight: 800; color: var(--text); line-height: 1; margin-bottom: 4px; }
+.resumenLabel { font-size: 12px; color: var(--text-muted); }
+.resumenDivider { width: 1px; height: 40px; background: var(--border); }
+
+.empty {
+  background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 60px 24px; text-align: center; color: var(--text-muted); font-size: 14px;
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
+}
+
+.tableWrap { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.table th {
+  background: var(--bg); padding: 12px 16px; text-align: left;
+  font-size: 11px; font-weight: 700; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.table td { padding: 14px 16px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.table tr:last-child td { border-bottom: none; }
+.table tr:hover td { background: var(--bg); }
+
+.descCell { font-size: 14px; font-weight: 500; color: var(--text); }
+.noDesc { color: var(--text-muted); font-style: italic; }
+
+.rangoCell { display: flex; align-items: center; gap: 6px; }
+.rango { font-size: 14px; font-weight: 700; color: var(--text); font-variant-numeric: tabular-nums; }
+.rangoSep { color: var(--text-muted); }
+
+.num { font-size: 14px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.siguienteNum { font-size: 13px; font-weight: 700; color: var(--primary); font-variant-numeric: tabular-nums; background: #eff6ff; padding: 3px 8px; border-radius: 6px; }
+.agotadoTag { font-size: 11px; font-weight: 700; color: #dc2626; background: #fef2f2; padding: 3px 8px; border-radius: 6px; }
+
+.statusWrap { display: flex; align-items: center; gap: 8px; min-width: 80px; }
+.miniBar { flex: 1; height: 6px; background: var(--border); border-radius: 4px; overflow: hidden; }
+.miniBarFill { height: 100%; border-radius: 4px; }
+
+/* Form */
+.form { display: flex; flex-direction: column; gap: 16px; }
+.rangoFields { display: flex; align-items: flex-end; gap: 8px; }
+.rangoFields .field { flex: 1; }
+.rangeSep { font-size: 20px; color: var(--text-muted); padding-bottom: 10px; flex-shrink: 0; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label { font-size: 13px; font-weight: 600; color: var(--text); }
+.input { padding: 10px 12px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 14px; color: var(--text); transition: border-color 0.15s; width: 100%; }
+.input:focus { border-color: var(--primary); }
+.preview {
+  display: flex; align-items: center; gap: 8px;
+  background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px;
+  padding: 10px 14px; font-size: 13px; color: #1d4ed8;
+}
+.error { font-size: 13px; color: var(--danger); background: #fef2f2; padding: 8px 12px; border-radius: 6px; }
+.submitBtn { background: var(--primary); color: white; font-size: 15px; font-weight: 700; padding: 12px; border-radius: 8px; transition: background 0.15s; margin-top: 4px; }
+.submitBtn:hover:not(:disabled) { background: var(--primary-dark); }
+.submitBtn:disabled { opacity: 0.7; cursor: not-allowed; }
+
+@media (max-width: 600px) { .page { padding: 20px; } .rangoFields { flex-direction: column; } .rangeSep { display: none; } }

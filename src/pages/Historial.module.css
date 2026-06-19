@@ -1,0 +1,50 @@
+.page { padding: 32px; max-width: 1100px; }
+.header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 20px; gap: 16px; flex-wrap: wrap; }
+.title { font-size: 26px; font-weight: 800; color: var(--text); margin-bottom: 4px; }
+.subtitle { font-size: 14px; color: var(--text-muted); }
+
+.totalChip {
+  background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px;
+  padding: 10px 16px; font-size: 14px; color: #1d4ed8; white-space: nowrap;
+}
+
+.toolbar { margin-bottom: 16px; }
+.search {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+  padding: 10px 14px; max-width: 480px; color: var(--text-muted);
+}
+.searchInput { border: none; background: none; font-size: 14px; color: var(--text); flex: 1; min-width: 0; }
+.searchInput::placeholder { color: #94a3b8; }
+
+.empty {
+  background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 60px 24px; text-align: center; display: flex; flex-direction: column;
+  align-items: center; gap: 12px; color: var(--text-muted); font-size: 14px;
+}
+
+.tableWrap { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.table th {
+  background: var(--bg); padding: 12px 16px; text-align: left;
+  font-size: 11px; font-weight: 700; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid var(--border); white-space: nowrap;
+}
+.table td { padding: 14px 16px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.table tr:last-child td { border-bottom: none; }
+.table tr:hover td { background: var(--bg); }
+
+.nombreCell { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--text); white-space: nowrap; }
+.avatar { width: 28px; height: 28px; border-radius: 50%; background: var(--primary); color: white; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.descCell { font-size: 14px; font-weight: 500; color: var(--text); max-width: 200px; }
+
+.consecutivosCell { display: flex; align-items: center; gap: 6px; }
+.consNum { font-size: 14px; font-weight: 800; color: var(--primary); font-variant-numeric: tabular-nums; background: #eff6ff; padding: 3px 8px; border-radius: 6px; }
+.consSep { color: var(--text-muted); font-weight: 600; }
+
+.cantidadBadge { font-size: 14px; font-weight: 700; color: #dc2626; background: #fef2f2; padding: 3px 10px; border-radius: 6px; }
+
+.loteCell { font-size: 12px; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+.fechaCell { font-size: 13px; color: var(--text-muted); white-space: nowrap; }
+
+@media (max-width: 700px) { .page { padding: 20px; } .table { min-width: 640px; } }

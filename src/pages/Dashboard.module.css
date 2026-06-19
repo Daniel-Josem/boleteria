@@ -1,0 +1,50 @@
+.page { padding: 32px; max-width: 1100px; }
+.header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 28px; gap: 16px; flex-wrap: wrap; }
+.title { font-size: 26px; font-weight: 800; color: var(--text); margin-bottom: 4px; }
+.subtitle { font-size: 14px; color: var(--text-muted); }
+.headerActions { display: flex; gap: 10px; }
+
+.recargarBtn { display: inline-flex; align-items: center; gap: 7px; background: var(--bg); border: 1px solid var(--border); color: var(--text); font-size: 14px; font-weight: 600; padding: 10px 16px; border-radius: 8px; transition: background 0.15s; }
+.recargarBtn:hover { background: var(--border); }
+.usarBtn { display: inline-flex; align-items: center; gap: 7px; background: var(--primary); color: white; font-size: 14px; font-weight: 600; padding: 10px 16px; border-radius: 8px; transition: background 0.15s; }
+.usarBtn:hover { background: var(--primary-dark); }
+
+.statsGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+.statCard { background: var(--card); border-radius: 12px; padding: 20px; display: flex; align-items: center; gap: 16px; border: 1px solid var(--border); }
+.statIcon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.statVal { font-size: 26px; font-weight: 800; line-height: 1; margin-bottom: 4px; }
+.statLabel { font-size: 12px; color: var(--text-muted); }
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.cardHeader { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; border-bottom: 1px solid var(--border); }
+.cardTitle { font-size: 15px; font-weight: 700; color: var(--text); }
+.cardLink { font-size: 13px; color: var(--primary); font-weight: 500; }
+.cardLink:hover { text-decoration: underline; }
+.emptyCard { padding: 40px 20px; text-align: center; color: var(--text-muted); font-size: 14px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.emptyBtn { background: var(--primary); color: white; font-size: 13px; font-weight: 600; padding: 8px 16px; border-radius: 6px; }
+
+.lotesList { padding: 8px 0; }
+.loteRow { display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-bottom: 1px solid var(--border); }
+.loteRow:last-child { border-bottom: none; }
+.loteInfo { flex: 1; min-width: 0; }
+.loteRango { font-size: 13px; font-weight: 700; color: var(--text); font-variant-numeric: tabular-nums; }
+.loteDesc { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.loteRight { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+.loteBarWrap { width: 60px; }
+.loteBar { height: 6px; background: var(--border); border-radius: 4px; overflow: hidden; }
+.loteBarFill { height: 100%; border-radius: 4px; }
+
+.movsList { padding: 8px 0; }
+.movRow { display: flex; align-items: center; gap: 12px; padding: 12px 20px; border-bottom: 1px solid var(--border); }
+.movRow:last-child { border-bottom: none; }
+.movConsecutivos { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+.movNum { font-size: 11px; font-weight: 700; color: var(--primary); background: #eff6ff; padding: 2px 6px; border-radius: 4px; font-variant-numeric: tabular-nums; }
+.movSep { font-size: 11px; color: var(--text-muted); }
+.movInfo { flex: 1; min-width: 0; }
+.movDesc { font-size: 13px; font-weight: 500; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.movFecha { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.movCantidad { font-size: 14px; font-weight: 700; color: #ef4444; flex-shrink: 0; }
+
+@media (max-width: 1000px) { .statsGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 700px) { .grid2 { grid-template-columns: 1fr; } .page { padding: 20px; } }
