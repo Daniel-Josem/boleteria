@@ -1,6 +1,6 @@
 import {
   collection, addDoc, updateDoc, doc,
-  onSnapshot, query, orderBy, serverTimestamp, getDoc
+  onSnapshot, query, orderBy, serverTimestamp, getDoc, getDocs
 } from 'firebase/firestore'
 import { db } from './config'
 
@@ -21,6 +21,14 @@ export async function crearLote({ desde, hasta, descripcion }) {
   const d = Number(desde)
   const h = Number(hasta)
   if (d >= h) throw new Error('El número inicial debe ser menor al final.')
+
+  const snap = await getDocs(collection(db, LOTES))
+  const lotes = snap.docs.map(doc => doc.data())
+  const conflicto = lotes.find(l => d <= l.hasta && h >= l.desde)
+  if (conflicto) {
+    throw new Error(`El rango se cruza con el lote existente ${conflicto.desde.toLocaleString()} — ${conflicto.hasta.toLocaleString()}.`)
+  }
+
   const total = h - d + 1
   await addDoc(collection(db, LOTES), {
     desde: d, hasta: h, total,
