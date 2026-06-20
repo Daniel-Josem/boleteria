@@ -47,4 +47,13 @@
 .movCantidad { font-size: 14px; font-weight: 700; color: #ef4444; flex-shrink: 0; }
 
 @media (max-width: 1000px) { .statsGrid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 700px) { .grid2 { grid-template-columns: 1fr; } .page { padding: 20px; } }
+@media (max-width: 700px) { .grid2 { grid-template-columns: 1fr; } .page { padding: 16px; } }
+@media (max-width: 480px) {
+  .statsGrid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .statCard { padding: 14px; gap: 10px; }
+  .statIcon { width: 38px; height: 38px; }
+  .statVal { font-size: 22px; }
+  .page { padding: 12px; }
+  .title { font-size: 22px; }
+  .headerActions { flex-wrap: wrap; }
+}

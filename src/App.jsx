@@ -11,6 +11,13 @@ export default function App() {
     <div className={styles.layout}>
       <Sidebar />
       <main className={styles.main}>
+        <div className={styles.mobileHeader}>
+          <img src="/eventu-icono.png" alt="Eventu" className={styles.mobileLogoImg} />
+          <div>
+            <div className={styles.mobileLogoTitle}>Eventu</div>
+            <div className={styles.mobileLogoSub}>Control de Boletería</div>
+          </div>
+        </div>
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/inventario" element={<Inventario />} />
